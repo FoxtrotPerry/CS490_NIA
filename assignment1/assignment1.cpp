@@ -12,9 +12,14 @@ int main() {
     srand (static_cast <unsigned> (time(NULL)));
     const int dimmensions[] = {1,2,3,5,8,13};
     for (int i = 0; i < 6; i++) {
+        std::cout<<"Dimensions: "<<dimmensions[i]<<std::endl;
+        std::cout<<"1000 Iterations:"<<std::endl;
         LRS(1000,dimmensions[i]);
+        std::cout<<"10000 Iterations:"<<std::endl;
         LRS(10000,dimmensions[i]);
+        std::cout<<"100000 Iterations:"<<std::endl;
         LRS(100000,dimmensions[i]);
+        std::cout<<"========================"<<std::endl;
     }
     return 0;
 }
@@ -38,7 +43,7 @@ float LRS(int iterations, int n) {
         }
     }
     for (int i = 0; i < n; i++) {
-        std::cout<<"Dimmension " << i <<" Value: "<< rand_locations[i] << std::endl;
+        // std::cout<<"Dimmension " << i <<" Value: "<< rand_locations[i] << std::endl;
     }
     std::cout<<"Best Found Fit: " << bestFit << std::endl;
 }
