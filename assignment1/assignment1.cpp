@@ -43,7 +43,7 @@ float LRS(int iterations, int n) {
         }
     }
     for (int i = 0; i < n; i++) {
-        // std::cout<<"Dimmension " << i <<" Value: "<< rand_locations[i] << std::endl;
+        std::cout<<"Dimmension " << i <<" Value: "<< rand_locations[i] << std::endl;
     }
     std::cout<<"Best Found Fit: " << bestFit << std::endl;
 }
