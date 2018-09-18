@@ -28,7 +28,7 @@ float LRS(int iterations, int n) {
     // n = dimmensions, iterations = amount of times to 
     std::unique_ptr<float[]> rand_locations = std::make_unique<float[]> (n);
     for (int i = 0; i < n;i++) {
-        rand_locations[i] = ((static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*16)-8;
+         rand_locations[i] = ((static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*16)-8;
     }
     float bestFit = fitness(n, rand_locations);
     std::unique_ptr<float[]> next_step = std::make_unique<float[]> (n);
